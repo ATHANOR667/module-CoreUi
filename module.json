@@ -1,0 +1,11 @@
+{
+    "name": "CoreUI",
+    "alias": "coreui",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CoreUI\\Providers\\CoreUIServiceProvider"
+    ],
+    "files": []
+}
