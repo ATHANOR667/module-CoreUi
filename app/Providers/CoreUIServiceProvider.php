@@ -2,10 +2,9 @@
 
 namespace Modules\CoreUI\Providers;
 
+use Illuminate\Console\View\Components\Alert;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Modules\CoreUI\View\Components\ActionCard;
-use Modules\CoreUI\View\Components\Button;
 use Nwidart\Modules\Traits\PathNamespace;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -29,9 +28,9 @@ class CoreUIServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadViewComponentsAs('coreui', [
-            Button::class,
-            ActionCard::class ,
+
         ]);
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'coreui');
     }
 
     /**
