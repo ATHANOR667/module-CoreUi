@@ -270,3 +270,41 @@ Lien style "inline", avec bordure en bas. À utiliser dans le slot `desktop_menu
     Accueil
 </x-coreui::nav-link>
 ```
+
+
+## 📊 6. Tableaux de Données
+
+Suite de composants pour uniformiser l'affichage des listes de données sur Desktop.
+*Note : Sur mobile, il est recommandé d'utiliser une boucle de `<x-coreui::card>` à la place.*
+
+### 14. `x-coreui::table`
+Conteneur principal du tableau (gère l'arrondi, le bord et le scroll horizontal).
+
+**Utilisation :**
+```blade
+<x-coreui::table>
+    <thead>...</thead>
+    <tbody>...</tbody>
+</x-coreui::table>
+```
+
+### 15. `x-coreui::table.th`
+Cellule d'en-tête (Header). Gère le style (uppercase, gris, gras).
+
+**Props :**
+
+| Nom | Type | Défaut | Description |
+| :--- | :--- | :--- | :--- |
+| `align` | String | `'left'` | `left`, `center`, `right`. |
+
+### 16. `x-coreui::table.row`
+Ligne du corps (Body Row). Gère le hover et les transitions.
+
+### 17. `x-coreui::table.td`
+Cellule de donnée standard.
+
+**Props :**
+
+| Nom | Type | Défaut | Description |
+| :--- | :--- | :--- | :--- |
+| `align` | String | `'left'` | `left`, `center`, `right`. |

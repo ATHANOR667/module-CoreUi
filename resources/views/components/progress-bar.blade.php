@@ -1,7 +1,7 @@
 @props(['value' => 0, 'max' => 100, 'color' => 'primary'])
 
 @php
-    $percentage = ($value / $max) * 100;
+    $percentage =  $value == 0 ? 0 : ($value / $max) * 100;
     $colors = [
         'primary' => 'bg-primary',
         'success' => 'bg-emerald-500',
